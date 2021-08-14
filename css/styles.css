@@ -1,0 +1,15 @@
+:root{
+    --font1:'Indie Flower', cursive;
+    --font2: 'Shadows Into Light', cursive;
+    --chalkRed:#FF5F55;
+    --chalkYellow:#FFFF4E;
+}
+
+h1{
+    font-family: var(--font1);
+}
+
+.board{
+    height: 60vh;
+    background-image: url("../images/ChalkBoardBG.jpg");
+}
