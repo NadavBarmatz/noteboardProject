@@ -3,6 +3,7 @@
     --font2: 'Shadows Into Light', cursive;
     --chalkRed:#FF5F55;
     --chalkYellow:#FFFF4E;
+    --grayBG: #E7E7E7;
 }
 
 h1{
@@ -10,6 +11,65 @@ h1{
 }
 
 .board{
-    height: 60vh;
+    height: 100vh;
     background-image: url("../images/ChalkBoardBG.jpg");
+    padding: 1%;
+}
+
+form label{
+    font-family: var(--font1);
+    font-weight: 600;
+    font-size: 1.1em;
+    color: white;
+}
+
+form input{
+    width: 100%;
+}
+
+.btn-properties{
+    position: relative;
+    width: 50%;
+    left: 25%;
+}
+
+.newNote{
+    width: 250px;
+    height: 350px;
+    border: 5px dotted var(--grayBG);
+    padding: 0.5%;
+}
+
+.newNote p, .newNote h2{
+    color: var(--grayBG);
+    font-family: var(--font1);
+}
+
+.note-title{
+    text-align: center;
+}
+
+.content-section{
+    height: 65%;
+    overflow-y: scroll;
+}
+
+.separate-line{
+    width: 100%;
+    border-top: 1px dotted var(--grayBG);
+    position: relative;
+    top: 5%;
+}
+
+.note-date{
+    text-align: end;
+}
+
+.note-del{
+    color: var(--grayBG);
+}
+
+.note-del:hover{
+    color:var(--chalkRed);
+    transform: scale(1.5);
 }

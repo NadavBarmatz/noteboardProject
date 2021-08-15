@@ -1,0 +1,2 @@
+TO DO:
+    work on css styling of the whiteboard grid
