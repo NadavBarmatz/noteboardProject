@@ -31,6 +31,10 @@ h1{
     grid-area: 2 /  span 5;
 }
 
+#dateId , #timeId{
+    width: 25%;
+}
+
 form label{
     font-family: var(--font1);
     font-weight: 600;
