@@ -1,12 +1,13 @@
-var formDate, formTitle, formContent;
+var formDate, formTime, formTitle, formContent;
 var notesKeyName = "allNotes"
 var noteList = [];
 
 showNotes();
 
 class Note{
-    constructor(date, title, content){
+    constructor(date, time, title, content){
         this.date = date,
+        this.time = time,
         this.title = title,
         this.content = content;
     }
@@ -14,6 +15,7 @@ class Note{
 
 function readFormData(){
     formDate = document.getElementById("dateId").value;
+    formTime = document.getElementById("timeId").value;
     formTitle = document.getElementById("titleId").value;
     formContent = document.getElementById("contentId").value;
 }
@@ -30,7 +32,7 @@ function addNote(){
 }
 
 function addToLocal(){
-    let note = new Note(formDate, formTitle, formContent);
+    let note = new Note(formDate, formTime, formTitle, formContent);
     if(localStorage.getItem(notesKeyName)){
         noteList = JSON.parse(localStorage.getItem(notesKeyName));
         noteList.push(note);
