@@ -11,9 +11,24 @@ h1{
 }
 
 .board{
-    height: 100vh;
+    height: 150vh;
     background-image: url("../images/ChalkBoardBG.jpg");
+    /* background-size: cover; */
     padding: 1%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0.3fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.board h1{
+    color: var(--grayBG);
+    grid-area: 1 / span 5;
+}
+
+#formId{
+    grid-area: 2 /  span 5;
 }
 
 form label{
@@ -23,8 +38,9 @@ form label{
     color: white;
 }
 
-form input{
+form input, form textarea{
     width: 100%;
+    background-color: var(--grayBG);
 }
 
 .btn-properties{
