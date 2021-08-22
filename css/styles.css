@@ -1,0 +1,216 @@
+:root{
+    --font1:'Fredericka the Great', cursive;
+    --font2: 'Shadows Into Light Two', cursive;
+    --chalkRed:#FF5F55;
+    --chalkYellow:#FFFF4E;
+    --grayBG: #E7E7E7;
+    --grayScroller: #979797;
+}
+
+.board{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url("../images/BGoptions/grunge-style-blackboard-texture.jpg");
+    background-size: 100%;
+    padding: 1%;
+}
+
+.board .title h1{
+    font-family: var(--font1);
+    font-size: 8em;
+    color: var(--grayBG);
+}
+
+.title p{
+    font-family: var(--font2);
+    font-size: 1.8em;
+    color: var(--grayBG);
+}
+
+#dateId , #timeId{
+    width: 20%;
+}
+
+form input{
+    width: 100%;
+    font-family: var(--font2);
+    color: var(--grayBG);
+    border: none;
+    background-color: transparent;
+    background-image: url(../images/textAreaLines/textAreaBG.png);
+    background-repeat: no-repeat;
+    background-position-x: -10px;
+}
+
+#titleId{
+    background-position-y: -6px;
+    padding-bottom: 15px;
+}
+
+/* form properties */
+.form-content-properties{
+    width: 100%;
+    font-family: var(--font2);
+    resize: none;
+    background-color: transparent;
+    background-image: url(../images/textAreaLines/textAreaBG.png);
+    background-size: contain;
+    background-position-y: 10px;
+    color: var(--grayBG);
+    line-height: 30px;
+    border: none;
+}
+
+form input, .form-content-properties:focus{
+    outline: 0;
+}
+
+/* change the color of time and calander icons */
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.8);
+}
+
+.fix-spread{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+
+form label{
+    font-family: var(--font2);
+    font-weight: 600;
+    font-size: 1.1em;
+    color: white;
+}
+
+.btn-properties{
+    position: relative;
+    width: 25%;
+    top: 30px;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 5%;
+    padding: 1%;
+    border-color: var(--grayBG);
+    background-image: none;
+}
+
+.btn-properties:hover{
+    background-color: transparent;
+    border-color: var(--grayBG);
+    transform: scale(1.1);
+}
+
+.delete-btn-properties{
+    position: relative;
+    left: 48%;
+    color: var(--chalkRed);
+    border-color: var(--chalkRed);
+}
+
+.delete-btn-properties:hover{
+    color: var(--chalkRed);
+    border-color: var(--chalkRed);
+}
+
+.notes-div{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+    @media only screen and (max-width: 1500px) {
+        .notes-div{
+            grid-template-columns: repeat(3, 1fr);
+        } 
+    }
+    @media only screen and (max-width: 768px) {
+        .notes-div{
+            grid-template-columns: repeat(2, 1fr);
+        } 
+    }
+    @media only screen and (max-width: 520px) {
+        .notes-div{
+            grid-template-columns: repeat(1, 1fr);
+        } 
+    }
+
+
+/* note properties */
+.newNote{
+    margin-top: 50px;
+    width: 300px;
+    height: 400px;
+    border: 50px solid transparent;
+}
+
+.newNote p, .newNote h2{
+    color: var(--grayBG);
+    font-family: var(--font2);
+}
+
+.note-title{
+    text-align: center;
+    height: 15%;
+    font-size: 1.7em;
+}
+
+.content-section{
+    margin-top: 5%;
+    height: 60%;
+    font-size: 1.2em;
+    overflow-y: auto;
+}
+
+.separate-line{
+    width: 100%;
+    border-top: 1px dotted var(--grayBG);
+    position: relative;
+    top: 5%;
+}
+
+.note-date{
+    position: relative;
+    left: 50%;
+}
+
+.note-del{
+    color: var(--grayBG);
+}
+
+.note-del:hover{
+    color:var(--chalkRed);
+    transform: scale(1.5);
+}
+
+/* textarea scrollbar properties */
+.content-section::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: 2px solid var(--grayScroller); 
+  }
+
+  /* buttons */
+  ::-webkit-scrollbar-button:vertical:increment{
+      background: url(../images/scrollBar/arrowDown.png);
+      background-size:contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-button:vertical:decrement{
+    background: url(../images/scrollBar/arrowUp.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}

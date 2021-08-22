@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div id="blackBoard" class="container-fluid board">
+        <div class="title text-center">
+            <h1>MY NOTES</h1>
+            <p>ADD YOUR NOTES</p>
+        </div>
+        <div class="d-flex justify-content-center" id="formId">
+            <form onsubmit="addNote()" action="">
+                <div class="fix-spread">
+                    <label for="date">DATE :</label>
+                    <input type="date" name="date" id="dateId">
+                    <!-- <input type="datetime-local" name="date" id="dateId"> -->
+                    <label for="time">TIME :</label>
+                    <input type="time" name="time" id="timeId"><br>
+                </div>
+
+                <label for="title">TITLE :</label>
+                <input type="text" name="title" id="titleId">
+
+                <label for="content">CONTENT :</label>
+                <textarea class="form-content-properties" name="content" id="contentId" cols="30" rows="4"></textarea>
+
+                <input class="btn-properties" type="submit" value="ADD NOTE">
+
+                <input class="btn-properties delete-btn-properties" type="button" value="DELETE NOTES" onclick="deleteAllNotes()">
+            </form>
+        </div>
+        <div id="notesDiv" class="notes-div"></div>
+    </div>
+</body>
+<!-- js -->
+<script src="../js/script.js"></script>
+</html>
